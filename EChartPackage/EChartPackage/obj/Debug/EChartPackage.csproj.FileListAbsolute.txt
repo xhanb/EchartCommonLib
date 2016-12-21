@@ -1,0 +1,7 @@
+E:\Project\EChartPackage\EChartPackage\bin\Debug\EChartPackage.dll
+E:\Project\EChartPackage\EChartPackage\bin\Debug\EChartPackage.pdb
+E:\Project\EChartPackage\EChartPackage\bin\Debug\Newtonsoft.Json.dll
+E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.csprojResolveAssemblyReference.cache
+E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.dll
+E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.pdb
+E:\Project\EChartPackage\EChartPackage\bin\Debug\EChartPackage.XML

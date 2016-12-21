@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26ED1CF5-CFFE-490D-99D7-2507AEC7B6D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EChartPackage</RootNamespace>
+    <AssemblyName>EChartPackage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\EChartPackage.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartCommon\ChartAreaStyle.cs" />
+    <Compile Include="ChartCommon\ChartChordStyle.cs" />
+    <Compile Include="ChartCommon\ChartCom.cs" />
+    <Compile Include="ChartCommon\ChartItemStyle.cs" />
+    <Compile Include="ChartCommon\ChartLabel.cs" />
+    <Compile Include="ChartCommon\ChartLabelLine.cs" />
+    <Compile Include="ChartCommon\ChartLineStyle.cs" />
+    <Compile Include="ChartCommon\ChartLinkStyle.cs" />
+    <Compile Include="ChartCommon\ChartLoadingOption.cs" />
+    <Compile Include="ChartCommon\ChartNoDataLoadingOption.cs" />
+    <Compile Include="ChartCommon\ChartNodeStyle.cs" />
+    <Compile Include="ChartCommon\ChartTextStyle.cs" />
+    <Compile Include="ChartComponent\ChartAxis.cs" />
+    <Compile Include="ChartComponent\ChartDataRange.cs" />
+    <Compile Include="ChartComponent\ChartDataZoom.cs" />
+    <Compile Include="ChartComponent\ChartGrid.cs" />
+    <Compile Include="ChartComponent\ChartLegend.cs" />
+    <Compile Include="ChartComponent\ChartRoamController.cs" />
+    <Compile Include="ChartComponent\ChartTimeline.cs" />
+    <Compile Include="ChartComponent\ChartTitle.cs" />
+    <Compile Include="ChartComponent\ChartToolbox.cs" />
+    <Compile Include="ChartComponent\ChartTooltip.cs" />
+    <Compile Include="ChartOpertation.cs" />
+    <Compile Include="ChartSeries\ChartChordSeries.cs" />
+    <Compile Include="ChartSeries\ChartComSeries.cs" />
+    <Compile Include="ChartSeries\ChartGanGeSeries.cs" />
+    <Compile Include="ChartSeries\ChartPieSeries.cs" />
+    <Compile Include="ChartSeries\ChartRadarSeries.cs" />
+    <Compile Include="ChartSeries\ChartRightangleSeries.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Newtonsoft.Json.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

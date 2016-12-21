@@ -1,0 +1,3528 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EChartPackage</name>
+    </assembly>
+    <members>
+        <member name="T:EChartPackage.ChartCommon.ChartAreaStyle">
+            <summary>
+            区域填充样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartAreaStyle.color">
+            <summary>
+            默认值：各异
+            颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartAreaStyle.type">
+            <summary>
+            默认值：'default' 
+            填充样式，目前仅支持'default'(实填充) 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartChordStyle">
+            <summary>
+            和弦图中的弦样式 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartChordStyle.width">
+            <summary>
+            默认值：1
+            贝塞尔曲线的线宽, ribbonType是false时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartChordStyle.color">
+            <summary>
+            默认值：1
+            贝塞尔曲线的颜色, ribbonType是false时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartChordStyle.borderWidth">
+            <summary>
+            默认值：1
+            ribbon的描边线宽, ribbonType是true时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartChordStyle.borderColor">
+            <summary>
+            默认值：1
+            ribbon的描边颜色, ribbonType是true时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartCom.backgroundColor">
+            <summary>
+            全图默认背景，支持rgba，默认为无(null)，透明，同'rgba(0,0,0,0)' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartCom.color">
+            <summary>
+            数值系列的颜色列表，可配数组，eg：['#87cefa', 'rgba(123,123,123,0.5)','...']，当系列数量个数比颜色列表长度大时将循环选取 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartCom.renderAsImage">
+            <summary>
+            boolean | string} false，非IE8-支持渲染为图片，可设为true或指定图片格式（png | jpeg），渲染为图片后实例依然可用（如setOption，resize等），但各种交互失效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartCom.calculable">
+            <summary>
+            是否启用拖拽重计算特性，默认关闭
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartCom.animation">
+            <summary>
+            是否开启动画，默认开启,建议IE8-关闭
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartItemStyle">
+            <summary>
+            图形样式，可设置图表内图形的默认样式和强调样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartItemStyle.normal">
+            <summary>
+             默认样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartItemStyle.emphasis">
+            <summary>
+            强调样式
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.NormalStyle">
+            <summary>
+            默认样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.color">
+            <summary>
+            适用类型：通用
+            默认值：图表各异 
+            颜色，主色 ，函数回调参数为{seriesIndex:x, series:xxx, dataIndex:y, data:yyy}
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.lineStyle">
+            <summary>
+            适用类型：折线图，K线图，markLine
+            默认值：图表各异 
+            线条样式，详见lineStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.areaStyle">
+            <summary>
+            适用类型：堆积折线图，地图
+            默认值：图表各异 
+            区域样式，详见areaStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.chordStyle">
+            <summary>
+            适用类型：和弦图
+            默认值：图表各异 
+            弦样式，详见chordStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.nodeStyle">
+            <summary>
+            适用类型：力导向图
+            默认值：图表各异 
+            节点样式，详见nodeStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.linkStyle">
+            <summary>
+            适用类型：力导向图
+            默认值：图表各异 
+            边样式，详见linkStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.borderColor">
+            <summary>
+            适用类型：折线图（symbol），散点图（symbole），饼图，地图，markPoint
+            默认值：各异 
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.borderWidth">
+            <summary>
+            适用类型：折线图（symbol），散点图（symbole），饼图，地图，markPoint
+            默认值：各异 
+            边框线宽，单位px 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.barBorderColor">
+            <summary>
+            适用类型：柱形图
+            默认值：'#fff'  
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.barBorderRadius">
+            <summary>
+            适用类型：柱形图
+            默认值：0
+            柱形边框圆角，单位px，默认为0，支持传入数组分别指定柱形4个圆角半径，如:[5, 5, 0, 0]（顺时针左上，右上，右下，左下） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.barBorderWidth">
+            <summary>
+            适用类型：柱形图
+            默认值：0 
+            柱形边框线宽，单位px，默认为0 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.label">
+            <summary>
+            适用类型：折线图，柱形图，K线图，散点图，饼图 ，地图，力导向，漏斗图，markPoint，markLine
+            默认值:{show: true,position:'outer'}     
+            标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，
+            漏斗图默认显示在右侧，离图形距离由labelLine.length决定
+            地图标签不可指定位置，
+            折线图，柱形图，K线图，散点图可指定position见下 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.NormalStyle.labelLine">
+            <summary>
+            适用类型:饼图，漏斗图
+            默认值：{show: true} 
+            标签视觉引导线，默认显示
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.EmphasisStyle">
+            <summary>
+            强调样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.color">
+            <summary>
+            适用类型：通用
+            默认值：图表各异 
+            颜色，主色 ，函数回调参数为{seriesIndex:x, series:xxx, dataIndex:y, data:yyy}
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.lineStyle">
+            <summary>
+            适用类型：折线图，K线图，markLine
+            默认值：图表各异 
+            线条样式，详见lineStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.areaStyle">
+            <summary>
+            适用类型：堆积折线图，地图
+            默认值：图表各异 
+            区域样式，详见areaStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.chordStyle">
+            <summary>
+            适用类型：和弦图
+            默认值：图表各异 
+            弦样式，详见chordStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.nodeStyle">
+            <summary>
+            适用类型：力导向图
+            默认值：图表各异 
+            节点样式，详见nodeStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.linkStyle">
+            <summary>
+            适用类型：力导向图
+            默认值：图表各异 
+            边样式，详见linkStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.borderColor">
+            <summary>
+            适用类型：折线图（symbol），散点图（symbole），饼图，地图，markPoint
+            默认值：各异 
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.borderWidth">
+            <summary>
+            适用类型：折线图（symbol），散点图（symbole），饼图，地图，markPoint
+            默认值：各异 
+            边框线宽，单位px 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.barBorderColor">
+            <summary>
+            适用类型：柱形图
+            默认值：'#fff'  
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.barBorderRadius">
+            <summary>
+            适用类型：柱形图
+            默认值：0
+            柱形边框圆角，单位px，默认为0，支持传入数组分别指定柱形4个圆角半径，如:[5, 5, 0, 0]（顺时针左上，右上，右下，左下） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.barBorderWidth">
+            <summary>
+            适用类型：柱形图
+            默认值：0 
+            柱形边框线宽，单位px，默认为0 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.label">
+            <summary>
+            适用类型：折线图，柱形图，K线图，散点图，饼图 ，地图，力导向，漏斗图，markPoint，markLine
+            默认值:{show: true,position:'outer'}     
+            标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，
+            漏斗图默认显示在右侧，离图形距离由labelLine.length决定
+            地图标签不可指定位置，
+            折线图，柱形图，K线图，散点图可指定position见下 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.EmphasisStyle.labelLine">
+            <summary>
+            适用类型:饼图，漏斗图
+            默认值：{show: true} 
+            标签视觉引导线，默认显示
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartLabel">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.show">
+            <summary>
+            默认值：true
+            标签显示策略，可选为：true（显示） | false（隐藏） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.position">
+            <summary>
+            默认值：'outer' | null
+            标签显示位置，地图标签不可指定位置
+            饼图可选为：'outer'（外部） | 'inner'（内部），
+            漏斗图可选为：'inner'（内部）| 'left' | 'right'（默认），
+            折线图，柱形图，K线图，散点图默认根据布局自适应为'top'或者'right'，可选的还有：'inside' | 'left' | 'bottom'
+            柱形图可选的还有，'insideLeft' | 'insideRight' | 'insideTop' | 'insideBottom' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.rotate">
+            <summary>
+            默认值：false
+            和弦图有效，文本标签自动旋转
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.distance">
+             <summary>
+             默认值：10
+             和弦图: 文本标签旋转后于弦的间隔
+            饼图: 当label position为inner时有效，为label位置到圆心的距离与圆半径(环状图为内外半径和)的比例系数，默认为0.5。 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.formatter">
+            <summary>
+            默认值：null
+            标签文本格式器，通用，同Tooltip.formatter，支持模板、方法回调，不支持异步回调
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabel.textStyle">
+            <summary>
+            默认值：null
+            标签的文本样式（详见textStyle） 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartLabelLine">
+            <summary>
+            标签视觉引导线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabelLine.show">
+            <summary>
+            默认值：true
+            饼图标签视觉引导线显示策略，可选为：true（显示） | false（隐藏） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabelLine.length">
+            <summary>
+            默认值：40
+            线长 ，从图形外边缘起计算，可为负值。漏斗图支持'auto'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLabelLine.textStyle">
+            <summary>
+            默认值：各异
+            线条样式，详见lineStyle
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartLineStyle">
+            <summary>
+            线条（线段）样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.color">
+            <summary>
+            默认值：各异
+            颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.type">
+            <summary>
+            默认值：'solid' 
+            线条样式，可选为：'solid' | 'dotted' | 'dashed' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.width">
+            <summary>
+            默认值：各异
+            线宽
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.shadowBlur">
+            <summary>
+            默认值：5
+            折线主线(IE8+)有效，阴影模糊度，大于0有效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.shadowOffsetX">
+            <summary>
+            默认值：3
+            折线主线(IE8+)有效，阴影横向偏移，正值往右，负值往左 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLineStyle.shadowOffsetY">
+            <summary>
+            默认值：3
+            折线主线(IE8+)有效，阴影纵向偏移，正值往下，负值往上 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartLinkStyle">
+            <summary>
+            力导向图中的边样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLinkStyle.type">
+            <summary>
+            默认值：'line' 
+            线条类型，可选为：'curve'（曲线） | 'line'（直线） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLinkStyle.color">
+            <summary>
+            默认值：'#5182ab' 
+            线条颜色 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLinkStyle.width">
+            <summary>
+            默认值：1
+            线宽  
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartLoadingOption">
+            <summary>
+            过渡显示，loading（读取中）的选项。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.text">
+            <summary>
+            默认值：'数据读取中...' 
+            显示话术 ，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.x">
+            <summary>
+            默认值：'center' 
+            水平安放位置，默认为全图居中，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.y">
+            <summary>
+            默认值：'center' 
+            垂直安放位置，默认为全图居中，可选为：'center' | 'bottom' | 'top' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.textStyle">
+            <summary>
+            默认值：null  
+            显示话术的文本样式（详见textStyle） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.effect">
+            <summary>
+            默认值：'spin'  
+            loading效果，可选为：'spin' | 'bar' | 'ring' | 'whirling' | 'dynamicLine' | 'bubble'，支持外部装载
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.effectOption">
+            <summary>
+            默认值：null  
+            loading效果选项，详见zrender
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartLoadingOption.progress">
+             <summary>
+             默认值：null  
+            指定当前进度[0~1]，个别效果有效。
+             </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartNoDataLoadingOption">
+            <summary>
+            无数据提示，loading动画选项。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.text">
+            <summary>
+            默认值： '暂无数据' 
+            显示话术 ，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.x">
+            <summary>
+            默认值：'center' 
+            水平安放位置，默认为全图居中，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.y">
+            <summary>
+            默认值：'center' 
+            垂直安放位置，默认为全图居中，可选为：'center' | 'bottom' | 'top' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.textStyle">
+            <summary>
+            默认值：null  
+            显示话术的文本样式（详见textStyle） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.effect">
+            <summary>
+            默认值：'spin'  
+            loading效果，可选为：'spin' | 'bar' | 'ring' | 'whirling' | 'dynamicLine' | 'bubble'，支持外部装载
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.effectOption">
+            <summary>
+            默认值：null  
+            loading效果选项，详见zrender
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNoDataLoadingOption.progress">
+             <summary>
+             默认值：null  
+            指定当前进度[0~1]，个别效果有效。
+             </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartNodeStyle">
+            <summary>
+            力导向图中的节点样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNodeStyle.color">
+            <summary>
+            默认值：'#f08c2e' 
+            填充颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNodeStyle.borderColor">
+            <summary>
+            默认值：'#5182ab' 
+            描边颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartNodeStyle.borderWidth">
+            <summary>
+            默认值：1
+            描边线宽
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartCommon.ChartTextStyle">
+            <summary>
+            文字样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.color">
+            <summary>
+            默认值：各异
+            颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.decoration">
+            <summary>
+            默认值：'none' 
+            修饰，仅对tooltip.textStyle生效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.align">
+            <summary>
+            默认值：各异 
+            水平对齐方式，可选为：'left' | 'right' | 'center' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.baseline">
+            <summary>
+            默认值：各异
+            垂直对齐方式，可选为：'top' | 'bottom' | 'middle' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.fontFamily">
+            <summary>
+            默认值：'Arial, Verdana, sans-serif'
+            字体系列  
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.fontSize">
+            <summary>
+            默认值：12
+            字号，单位px  
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.fontStyle">
+            <summary>
+            默认值：'normal'
+            字体系列  
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartCommon.ChartTextStyle.fontWeight">
+            <summary>
+            默认值：'normal'
+            粗细，可选为：'normal' | 'bold' | 'bolder' | 'lighter' | 100 | 200 |... | 900  
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartAxis">
+            <summary>
+            坐标轴(个别选项仅在个别类型时有效)
+            坐标轴有三种类型，类目型、数值型和时间型，他们的区别在于：
+            类目型：需要指定类目列表，坐标轴内有且仅有这些指定类目坐标
+            数值型：需要指定数值区间，不指定时则自定计算数值范围，坐标轴内包含数值区间内容全部坐标
+            时间型：时间型坐标轴用法同数值型，只是目标处理和格式化显示时会自动转变为时间，并且随着时间跨度的不同自动切换需要显示的时间粒度
+            个别选项仅在个别类型时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.type">
+            <summary>
+            默认值：'category' | 'value' | 'time'
+            适用类型: 通用
+            坐标轴类型，横轴默认为类目型'category'，纵轴默认为数值型'value'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.show">
+            <summary>
+            默认值：true
+            适用类型:通用
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.zlevel">
+            <summary>
+            默认值：0
+            适用类型:通用
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.z">
+            <summary>
+            默认值：0
+            适用类型:通用	
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.position">
+            <summary>
+            默认值：'bottom' | 'left'
+            适用类型:通用
+            坐标轴类型，横轴默认为类目型'bottom'，纵轴默认为数值型'left'，可选为：'bottom' | 'top' | 'left' | 'right'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.name">
+            <summary>
+            默认值：''
+            适用类型:数值型，时间型
+            坐标轴名称，默认为空
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.nameLocation">
+            <summary>
+            默认值：'end'
+            适用类型:数值型，时间型
+            坐标轴名称位置，默认为'end'，可选为：'start' | 'end'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.nameTextStyle">
+            <summary>
+            默认值：{}
+            适用类型:数值型，时间型
+            坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.boundaryGap">
+            <summary>
+            适用类型:类目型,数值型，时间型
+            功能1：类目起始和结束两端空白策略，见下图，默认为true留空，false则顶头，默认值：true
+            功能2：坐标轴两端空白策略，数组内数值代表百分比，[原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]，默认值：[0, 0]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.min">
+            <summary>
+            默认值：null
+            适用类型:数值型，时间型
+            指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.max">
+            <summary>
+            默认值：null
+            适用类型:数值型，时间型
+            指定的最大值，eg: 100，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[1]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.scale">
+            <summary>
+            默认值：false
+            适用类型:数值型，时间型
+            脱离0值比例，放大聚焦到最终_min，_max区间
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.splitNumber">
+            <summary>
+            默认值：null
+            适用类型:数值型，时间型
+            分割段数，不指定时根据min、max算法调整
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.axisLine">
+            <summary>
+            默认值：各异
+            适用类型:通用
+            坐标轴线，默认显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.axisTick">
+            <summary>
+            默认值：各异
+            适用类型:通用
+            坐标轴小标记，默认不显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.axisLabel">
+            <summary>
+            默认值：各异
+            适用类型:通用
+            坐标轴文本标签
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.splitLine">
+            <summary>
+            默认值：各异
+            适用类型:通用
+            分隔线，默认显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.splitArea">
+            <summary>
+            默认值：各异
+            适用类型:通用
+            分隔区域，默认不显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartAxis.data">
+            <summary>
+            默认值：[]
+            适用类型:类目型
+            类目列表，同时也是label内容
+            注意：当需要显示类目型坐标轴文本标签数组，指定label内容时，将参数‘object’替换为‘AxisData’
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.AxisLine">
+            <summary>
+            坐标轴线，默认显示且带如下样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLine.show">
+            <summary>
+            默认值：true
+            适用类型:通用
+            是否显示，默认为true，设为false后下面都没意义了
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLine.onZero">
+            <summary>
+            默认值：true
+            适用类型:通用
+            定位到垂直方向的0值坐标上
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLine.lineStyle">
+            <summary>
+            默认值：{
+                color: '#48b',
+                width: 2,
+                type: 'solid'
+            }   
+            适用类型:通用
+            （详见lineStyle）属性lineStyle控制线条样式
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.AxisTick">
+            <summary>
+            坐标轴小标记，数值轴和时间轴默认不显示，类目轴默认显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.show">
+            <summary>
+            默认值：  false（数值轴和时间轴） true（类目轴）
+            适用类型:通用
+            是否显示，默认为false，设为true后下面为默认样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.interval">
+            <summary>
+            默认值：'auto'
+            适用类型:类目型
+            小标记显示挑选间隔，默认为'auto'，可选为： 
+            'auto'（随axisLabel，自动隐藏显示不下的） | 0（全部显示） | 
+            {number}（用户指定选择间隔） 
+            {function}函数回调，传递参数[index，data[index]]，返回true显示，返回false隐藏
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.onGap">
+            <summary>
+            默认值：  null
+            适用类型:类目型
+            小标记是否显示为间隔，默认等于boundaryGap
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.inside">
+            <summary>
+            默认值：  false
+            适用类型:通用
+            小标记是否显示为在grid内部，默认在外部
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.length">
+            <summary>
+            默认值：5
+            适用类型:通用
+            属性length控制线长
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.lineStyle">
+            <summary>
+            默认值：  {
+                color: '#333',
+                width: 1
+            }   
+            适用类型:通用
+            （详见lineStyle）属性lineStyle控制线条样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisTick.splitNumber">
+            <summary>
+            分割段数，控制每份split细分多少段
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.AxisLabel">
+            <summary>
+            坐标轴文本标签选项
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.show">
+            <summary>
+            默认值： true
+            适用类型:通用
+            是否显示，默认为true，设为false后下面都没意义了
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.interval">
+            <summary>
+            默认值： 'auto'
+            适用类型:类目型
+            标签显示挑选间隔，默认为'auto'，可选为： 
+            'auto'（自动隐藏显示不下的） | 0（全部显示） | 
+            {number}（用户指定选择间隔） 
+            {function}函数回调，传递参数[index，data[index]]，返回true显示，返回false隐藏
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.rotate">
+            <summary>
+            默认值： 0
+            适用类型:通用
+            标签旋转角度，默认为0，不旋转，正值为逆时针，负值为顺时针，可选为：-90 ~ 90
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.margin">
+            <summary>
+            默认值： 8
+            适用类型:通用
+            坐标轴文本标签与坐标轴的间距，默认为8，单位px
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.clickable">
+            <summary>
+            默认值： false
+            适用类型:通用
+            坐标轴文本标签是否可点击
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.formatter">
+            <summary>
+            默认值： null
+            适用类型:通用
+            间隔名称格式器：{string}（Template） | {Function}
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisLabel.textStyle">
+            <summary>
+            默认值： {
+                color: '#333'
+            }  
+            适用类型:通用
+            文本样式（详见textStyle），其中当坐标轴为数值型和时间型时，color接受方法回调，实现个性化的颜色定义，support #226 »
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.SplitLine">
+            <summary>
+            分隔线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitLine.show">
+            <summary>
+            默认值：true
+            适用类型:通用
+            是否显示，默认为true，设为false后下面都没意义了
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitLine.onGap">
+            <summary>
+            默认值：null
+            适用类型:类目型
+            分隔线是否显示为间隔，默认等于boundaryGap
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitLine.lineStyle">
+            <summary>
+            默认值：{
+                color: ['#ccc'],
+                width: 1,
+                type: 'solid'
+            }
+            适用类型:通用
+            （详见lineStyle）属性lineStyle控制线条样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitLine.length">
+            <summary>
+            线长
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.SplitArea">
+            <summary>
+            分隔区域，默认不显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitArea.show">
+            <summary>
+            默认值：false
+            适用类型:通用
+            是否显示，默认为false，设为true后带如下默认样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitArea.onGap">
+            <summary>
+            默认值：null
+            适用类型:类目型
+            分隔区域是否显示为间隔，默认等于boundaryGap
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SplitArea.areaStyle">
+            <summary>
+            默认值：{
+                color: [
+                    'rgba(250,250,250,0.3)',
+                    'rgba(200,200,200,0.3)'
+                ]
+            }    
+            适用类型:通用
+            属性areaStyle（详见areaStyle）控制区域样式，颜色数组实现间隔变换。
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.AxisData">
+            <summary>
+            类目型坐标轴文本标签数组，指定label内容。 数组项通常为文本，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisData.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisData.textStyle">
+            <summary>
+            （详见textStyle）值样式
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartDataRange">
+            <summary>
+            值域选择，每个图表最多仅有一个值域控件。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.show">
+            <summary>
+            默认值：true
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.z">
+            <summary>
+            默认值：4	
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.orient">
+            <summary>
+            默认值：'vertical'
+            布局方式，默认为垂直布局，可选为：'horizontal' | 'vertical'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.x">
+            <summary>
+            默认值：'left'
+            水平安放位置，默认为全图左对齐，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.y">
+            <summary>
+            默认值：'bottom'
+            垂直安放位置，默认为全图底部，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            值域控件背景颜色，默认透明
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.borderColor">
+            <summary>
+            默认值：'#ccc'
+            值域控件边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.borderWidth">
+            <summary>
+            默认值：0
+            值域控件边框线宽，单位px，默认为0（无边框）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.padding">
+            <summary>
+            默认值：5
+            值域控件内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.itemGap">
+            <summary>
+            默认值：10
+            各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.itemWidth">
+            <summary>
+            默认值：20
+            值域控件图形宽度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.itemHeight">
+            <summary>
+            默认值：14
+            值域控件图形高度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.min">
+            <summary>
+            默认值：null
+            指定的最小值，eg: 0，默认无，必须参数
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.max">
+            <summary>
+            默认值：null
+            指定的最大值，eg: 100，默认无，必须参数
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.precision">
+            <summary>
+            默认值：0	
+            小数精度，默认为0，无小数点，当 min ~ max 间在当前精度下无法整除splitNumber份时，精度会自动提高以满足均分，不支持不等划分
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.splitNumber">
+            <summary>
+            默认值：5
+            分割段数，默认为5，为0时为线性渐变，calculable为true是默认均分100份
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.selectedMode">
+            <summary>
+            默认值：true
+            选择模式，默认开启值域开关，可选single，multiple
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.calculable">
+            <summary>
+            默认值：false
+            是否启用值域漫游，启用后无视splitNumber，值域显示为线性渐变
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.hoverLink">
+            <summary>
+            默认值：true
+            是否启用地图hover时的联动响应（详情披露）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.realtime">
+            <summary>
+            默认值：true
+            值域漫游是否实时显示，在不支持Canvas的浏览器中该值自动强制置为false。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.color">
+            <summary>
+            默认值：['#1e90ff','#f0ffff']
+            值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识 ，支持Alpha通道上的变化（rgba）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.formatter">
+            <summary>
+            默认值：null
+            内容格式器：{string}（Template） | {Function}，模板变量为'{value}'和'{value2}'，代表数值起始值和结束值，函数参数两个，含义同模板变量，当calculable为true时模板变量仅有'{value}'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.text">
+            <summary>
+            默认值：null
+            值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataRange.textStyle">
+            <summary>
+            默认值：{color: '#333'}
+            （详见textStyle）默认只设定了值域控件文字颜色
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartDataZoom">
+            <summary>
+            数据区域缩放。与toolbox.feature.dataZoom同步，仅对直角坐标系图表有效。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.z">
+            <summary>
+            默认值：4
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.show">
+            <summary>
+            默认值：false
+            是否显示，当show为true时则接管使用指定类目轴的全部系列数据，如不指定则接管全部直角坐标系数据。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.orient">
+            <summary>
+            默认值：'horizontal'
+            布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.x">
+            <summary>
+            默认值：自适应
+            水平安放位置，默认为根据grid参数适配，纵向布局默认左侧，可指定 {number}（左上角x坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.y">
+            <summary>
+            默认值：自适应
+            垂直安放位置，默认为根据grid参数适配，纵向布局默认下方，可指定 {number}（左上角y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.width">
+            <summary>
+            默认值：自适应 | 30
+            指定宽度，横向布局时默认为根据grid参数适配，纵向布局是默认为30，可指定 {number}（宽度，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.height">
+            <summary>
+            默认值：自适应 | 30
+            指定高度，纵向布局时默认为根据grid参数适配，横向布局是默认为30，可指定 {number}（高度，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            背景颜色，默认透明
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.dataBackgroundColor">
+            <summary>
+            默认值：'#eee'
+            数据缩略背景颜色，仅以第一个系列的数据作为缩量图显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.fillerColor">
+            <summary>
+            默认值：'rgba(144,197,237,0.2)'
+            选择区域填充颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.handleColor">
+            <summary>
+            默认值：'rgba(70,130,180,0.8)'
+            控制手柄颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.handleSize">
+            <summary>
+            默认值：8
+            控制手柄大小
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.xAxisIndex">
+            <summary>
+            默认值：null
+            当不指定时默认控制所有横向类目，可通过数组指定多个需要控制的横向类目坐标轴Index，仅一个时可直接为数字
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.yAxisIndex">
+            <summary>
+            默认值：null
+            当不指定时默认控制所有纵向类目，可通过数组指定多个需要控制的纵向类目坐标轴Index，仅一个时可直接为数字
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.start">
+            <summary>
+            默认值：0
+            数据缩放，选择起始比例，默认为0（%），从首个数据起选择。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.end">
+            <summary>
+            默认值：100
+            数据缩放，选择结束比例，默认为100（%），到最后一个数据选择结束。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.showDetail">
+            <summary>
+            默认值：true
+            缩放变化是否显示定位详情。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.realtime">
+            <summary>
+            默认值：false
+            缩放变化是否实时显示，在不支持Canvas的浏览器中该值自动强制置为false。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartDataZoom.zoomLock">
+            <summary>
+            默认值：false
+            数据缩放锁，默认为false，当设置为true时选择区域不能伸缩，即(end - start)值保持不变，仅能做数据漫游。
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartGrid">
+            <summary>
+            直角坐标系内绘图网格
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.z">
+            <summary>
+            默认值：0
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.x">
+            <summary>
+            默认值：80
+            直角坐标系内绘图网格左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.y">
+            <summary>
+            默认值：60
+            直角坐标系内绘图网格左上角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.x2">
+            <summary>
+            默认值：80
+            直角坐标系内绘图网格右下角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.y2">
+            <summary>
+            默认值：60
+            直角坐标系内绘图网格右下角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.width">
+            <summary>
+            默认值：自适应
+            直角坐标系内绘图网格（不含坐标轴）宽度，默认为总宽度 - x - x2，数值单位px，指定width后将忽略x2。
+            支持百分比（字符串），如'50%'(显示区域一半的宽度)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.height">
+            <summary>
+            默认值：自适应
+            直角坐标系内绘图网格（不含坐标轴）高度，默认为总高度 - y - y2，数值单位px，指定height后将忽略y2。 
+            支持百分比（字符串），如'50%'(显示区域一半的高度)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.backgroundColors">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            背景颜色，默认透明。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.borderWidth">
+            <summary>
+            默认值：1
+            边框线宽
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.borderColor">
+            <summary>
+            默认值：'#ccc'
+            边框颜色。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartGrid.containLable">
+            <summary>
+            [Defalult:false]
+            grid区域是否包含坐标轴的刻度标签，在无法确定坐标轴标签的宽度，容器有比较小无法预留较多空间的时候，可以设为true防止标签溢出容器。
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartLegend">
+            <summary>
+            图例，每个图表最多仅有一个图例。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.show">
+            <summary>
+            默认值：true
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.z">
+            <summary>
+            默认值：4
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.orient">
+            <summary>
+            默认值：'horizontal'
+            布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.x">
+            <summary>
+            默认值：'center'
+            水平安放位置，默认为全图居中，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.y">
+            <summary>
+            默认值：'top'
+            垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            图例背景颜色，默认透明
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.borderColor">
+            <summary>
+            默认值：'#ccc'
+            图例边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.borderWidth">
+            <summary>
+            默认值：0
+            图例边框线宽，单位px，默认为0（无边框）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.padding">
+            <summary>
+            默认值：5
+            图例内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.itemGap">
+            <summary>
+            默认值：10
+            各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.itemWidth">
+            <summary>
+            默认值：20
+            图例图形宽度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.itemHeight">
+            <summary>
+            默认值：14
+            图例图形高度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.textStyle">
+            <summary>
+            默认值：{color: '#333'}
+            默认只设定了图例文字颜色（详见textStyle） ，更个性化的是，要指定文字颜色跟随图例，可设color为'auto'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.formatter">
+            <summary>
+            默认值：null
+            文本格式器：{string}（Template） | {Function}，模板变量为'{name}'，函数回调参数为name
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.selectedMode">
+            <summary>
+            默认值：true
+            选择模式，默认开启图例开关，可选single，multiple
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.selected">
+            <summary>
+            默认值：null
+            配置默认选中状态，可配合LEGEND.SELECTED事件做动态数据载入
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.data">
+            <summary>
+            默认值：[ ]
+            图例内容数组,数组项通常为{string}，每一项代表一个系列的name，默认布局到达边缘会自动分行（列），传入空字符串''可实现手动分行（列）。 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartLegend.LegendDatas">
+            <summary>
+            默认值：[ ]
+            图例内容数组，数组项通常为{string}，每一项代表一个系列的name，默认布局到达边缘会自动分行（列），传入空字符串''可实现手动分行（列）。 
+            使用根据该值索引series中同名系列所用的图表类型和itemStyle，如果索引不到，该item将默认为没启用状态。 
+            如需个性化图例文字样式，可把数组项改为{Object}，指定文本样式和个性化图例icon，格式为 
+            {
+              name : {string}, 
+              textStyle : {Object}, 
+              icon : {string}
+            }
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.LegendData">
+            <summary>
+            图例内容数组
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.LegendData.name">
+            <summary>
+            每一项代表一个系列的name，默认布局到达边缘会自动分行（列），传入空字符串''可实现手动分行（列）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.LegendData.textStyle">
+             <summary>
+            （详见 textStyle）
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.LegendData.icon">
+            <summary>
+            指定文本样式和个性化图例icon
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartRoamController">
+            <summary>
+            缩放漫游组件，仅对地图有效 (暂不做处理)
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartTimeline">
+            <summary>
+            时间轴，每个图表最多仅有一个时间轴控件
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.show">
+            <summary>
+            默认值: true
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.zlevel">
+            <summary>
+            默认值: 0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.z">
+            <summary>
+            默认值: 4
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.type">
+            <summary>
+            默认值: 'time'
+            模式是时间类型，时间轴间隔根据时间跨度自动计算，可选为：'number'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.notMerge">
+            <summary>
+            默认值: false
+            时间轴上多个option切换时是否进行merge操作，同setOption第二个参数
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.x">
+            <summary>
+            默认值: 80
+            时间轴左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.y">
+            <summary>
+            默认值: null
+            时间轴左上角纵坐标，数值单位px，支持百分比（字符串），默认无，随y2定位，如'50%'(显示区域纵向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.x2">
+            <summary>
+            默认值: 80
+            时间轴右下角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.y2">
+            <summary>
+            默认值: 0
+            时间轴右下角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.width">
+            <summary>
+            默认值: 自适应
+            时间轴宽度，默认为总宽度 - x - x2，数值单位px，指定width后将忽略x2。见下图。 支持百分比（字符串），如'50%'(显示区域一半的宽度)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.height">
+            <summary>
+            默认值: 自适应
+            时间轴高度，数值单位px，支持百分比（字符串），如'50%'(显示区域一半的高度)
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.backgroundColor">
+            <summary>
+            默认值: 'rgba(0,0,0,0)'
+            背景颜色，默认透明。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.borderWidth">
+            <summary>
+            默认值: 0
+            边框线宽
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.borderColor">
+            <summary>
+            默认值: '#ccc'
+            边框颜色。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.padding">
+            <summary>
+            默认值: 5
+            内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.controlPosition">
+            <summary>
+            默认值: 'left'
+            播放控制器位置，可选为：'left' | 'right' | 'none'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.autoPlay">
+            <summary>
+            默认值: false
+            是否自动播放
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.loop">
+            <summary>
+            默认值: true
+            是否循环播放
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.playInterval">
+            <summary>
+            默认值: 2000
+            播放时间间隔，单位ms
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.lineStyle">
+            <summary>
+            默认值: {
+               color: '#666',
+               width: 1,
+               type: 'dashed'
+            }   
+            时间轴轴线样式，lineStyle控制线条样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.label">
+             <summary>
+            默认值: {
+                show: true,
+                interval: 'auto',
+                rotate: 0,
+                formatter: null,
+                textStyle: {
+                    color: '#333'
+                }
+            }
+            时间轴标签文本
+            show : 是否显示 
+            interval : 挑选间隔，默认为'auto'，可选为：'auto'（自动隐藏显示不下的） | 0（全部显示） | {number} 
+            rotate : 旋转角度，默认为0，不旋转，正值为逆时针，负值为顺时针，可选为：-90 ~ 90 
+            formatter ： 间隔名称格式器：{string}（Template） | {Function} 
+            textStyle : 文字样式
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.checkpointStyle">
+             <summary>
+             默认值: {
+                 symbol : 'auto',
+                 symbolSize : 'auto',
+                 color : 'auto',
+                 borderColor : 'auto',
+                 borderWidth : 'auto',
+                 label: {
+                     show: false,
+                     textStyle: {
+                         color: 'auto'
+                     }
+                 }
+             }         
+             时间轴当前点
+            symbol : 当前点symbol，默认随轴上的symbol 
+            symbolSize : 当前点symbol大小，默认随轴上symbol大小 
+            color : 当前点symbol颜色，默认为随当前点颜色，可指定具体颜色，如无则为'#1e90ff' 
+            borderColor ： 当前点symbol边线颜色 
+            borderWidth ： 当前点symbol边线宽度 
+            label同上
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.controlStyle">
+            <summary>
+            默认值: {
+               itemSize: 15,
+               itemGap: 5,
+               normal : {
+                   color : '#333'
+               },
+               emphasis : {
+                   color : '#1e90ff'
+               }
+            }    
+            时间轴控制器样式，可指定itemSize按钮大小，itemGap按钮间隔，normal.color正常和emphasis.color高亮颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.symbol">
+            <summary>
+            默认值: 'emptyDiamond'
+            轴点symbol，同serie.symbol
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.symbolSize">
+            <summary>
+            默认值: 4
+            轴点symbol，同serie.symbolSize
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.currentIndex">
+            <summary>
+            默认值: 0
+            当前索引位置，对应options数组，用于指定显示特定系列
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTimeline.data">
+            <summary>
+            默认值: []
+            时间轴列表，同时也是轴label内容
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.CheckpointStyle">
+            <summary>
+            时间轴当前点
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.symbol">
+            <summary>
+            symbol : 当前点symbol，默认随轴上的symbol 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.symbolSize">
+            <summary>
+            symbolSize : 当前点symbol大小，默认随轴上symbol大小
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.color">
+            <summary>
+            color : 当前点symbol颜色，默认为随当前点颜色，可指定具体颜色，如无则为'#1e90ff' 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.borderColor">
+            <summary>
+            borderColor ： 当前点symbol边线颜色 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.borderWidth">
+            <summary>
+            borderWidth ： 当前点symbol边线宽度 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.CheckpointStyle.label">
+            <summary>
+            （相见 label ） 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ControlStyle">
+            <summary>
+            时间轴控制器样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ControlStyle.itemSize">
+            <summary>
+            可指定itemSize按钮大小
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ControlStyle.itemGap">
+            <summary>
+            itemGap按钮间隔
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ControlStyle.normal">
+            <summary>
+            normal.color正常
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ControlStyle.emphasis">
+            <summary>
+            emphasis.color高亮颜色
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.colors">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.colors.color">
+            <summary>
+            颜色值
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartTitle">
+            <summary>
+            标题，每个图表最多仅有一个标题控件，每个标题控件可设主副标题。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.show">
+            <summary>
+            默认值：true
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.z">
+            <summary>
+            默认值：6
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.text">
+            <summary>
+            默认值：''
+            主标题文本，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.link">
+            <summary>
+            默认值：''
+            主标题文本超链接
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.target">
+            <summary>
+            默认值：null
+            指定窗口打开主标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.subtext">
+            <summary>
+            默认值：''
+            副标题文本，'\n'指定换行
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.sublink">
+            <summary>
+            默认值：''
+            副标题文本超链接
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.subtarget">
+            <summary>
+            默认值：null
+            指定窗口打开副标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.x">
+            <summary>
+            默认值：'left'
+            水平安放位置，默认为左侧，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.y">
+            <summary>
+            默认值：'top'
+            垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.textAlign">
+            <summary>
+            默认值：null
+            水平对齐方式，默认根据x设置自动调整，可选为： left' | 'right' | 'center
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            标题背景颜色，默认透明
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.borderColor">
+            <summary>
+            默认值：'#ccc'
+            标题边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.borderWidth">
+            <summary>
+            默认值：0
+            标题边框线宽，单位px，默认为0（无边框）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.padding">
+            <summary>
+            默认值：5
+            标题内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.itemGap">
+            <summary>
+            默认值：5
+            主副标题纵向间隔，单位px，默认为5
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.textStyle">
+            <summary>
+            默认值：{
+                fontSize: 18,
+                fontWeight: 'bolder',
+                color: '#333'
+            } 
+            主标题文本样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.subtextStyle">
+            <summary>
+            默认值：{
+                color: '#aaa'
+            }  
+            副标题文本样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTitle.offsetCenter">
+            <summary>
+            用于标题定位，数组为横纵相对仪表盘圆心坐标偏移，支持百分比（相对外半径）
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartToolbox">
+            <summary>
+            工具箱，每个图表最多仅有一个工具箱
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.show">
+            <summary>
+            默认值：false	
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.zlevel">
+            <summary>
+            默认值：0
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.z">
+            <summary>
+            默认值：6
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.orient">
+            <summary>
+            默认值：'horizontal'
+            布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.x">
+            <summary>
+            默认值：'right'
+            水平安放位置，默认为全图居中，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.y">
+            <summary>
+            默认值：'top'
+            垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0)'
+            工具箱背景颜色，默认透明
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.borderColor">
+            <summary>
+            默认值：'#ccc'
+            工具箱边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.borderWidth">
+            <summary>
+            默认值：0
+            工具箱边框线宽，单位px，默认为0（无边框）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.padding">
+            <summary>
+            默认值：5
+            工具箱内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.itemGap">
+            <summary>
+            默认值：10
+            各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔，见下图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.itemSize">
+            <summary>
+            默认值：16
+            工具箱icon大小，单位（px）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.color">
+            <summary>
+            默认值：['#1e90ff','#22bb22','#4b0082','#d2691e']
+            工具箱icon颜色序列，循环使用，同时支持在具体feature内指定color
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.disableColor">
+            <summary>
+            默认值：'#ddd'
+            禁用颜色定义
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.effectiveColor">
+            <summary>
+            默认值：'red'
+            生效颜色定义
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.showTitle">
+            <summary>
+            默认值：true
+            是否显示工具箱文字提示，默认启用
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.textStyle">
+            <summary>
+            默认值：{}
+            工具箱提示文字样式，（详见textStyle）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartToolbox.feature">
+            <summary>
+            默认值：{
+                mark : {
+                    show : false,
+                    title : {
+                        mark : '辅助线开关',
+                        markUndo : '删除辅助线',
+                        markClear : '清空辅助线'
+                    },
+                    lineStyle : {
+                        width : 2,
+                        color : '#1e90ff',
+                        type : 'dashed'
+                    }
+                },
+                dataZoom : {
+                    show : false,
+                    title : {
+                        dataZoom : '区域缩放',
+                        dataZoomReset : '区域缩放后退'
+                    }
+                },
+                dataView : {
+                    show : false,
+                    title : '数据视图',
+                    readOnly: false,
+                    lang: ['数据视图', '关闭', '刷新']
+                },
+                magicType: {
+                    show : false,
+                    title : {
+                        line : '折线图切换',
+                        bar : '柱形图切换',
+                        stack : '堆积',
+                        tiled : '平铺',
+                        force: '力导向布局图切换',
+                        chord: '和弦图切换',
+                        pie: '饼图切换',
+                        funnel: '漏斗图切换'
+                    },
+                    option: {
+                        // line: {...},
+                        // bar: {...},
+                        // stack: {...},
+                        // tiled: {...},
+                        // force: {...},
+                        // chord: {...},
+                        // pie: {...},
+                        // funnel: {...}
+                    },
+                    type : []
+                },
+                restore : {
+                    show : false,
+                    title : '还原'
+                },
+                saveAsImage : {
+                    show : false,
+                    title : '保存为图片',
+                    type : 'png',
+                    lang : ['点击保存'] 
+                }
+            } 
+            启用功能，目前支持feature见下，工具箱自定义功能回调处理
+            mark，辅助线标志，上图icon左数1/2/3，分别是启用，删除上一条，删除全部，可设置更多属性
+            可传入lineStyle（详见lineStyle）控制线条样式
+            
+            dataZoom，框选区域缩放，自动与存在的dataZoom控件同步，上图icon左数4/5，分别是启用，缩放后退
+            
+            dataView，数据视图，上图icon左数6，打开数据视图，可设置更多属性
+            {boolean=} readOnly 默认数据视图为只读，可指定readOnly为false打开编辑功能
+            {Function=} optionToContent 自主编排数据视图的显示内容
+            {Function=} contentToOption 当数据视图readOnly为false时，会出现刷新按钮，如果是自主编排的显示内容，如何翻转也请自理
+            {Array=} lang 数据视图上有三个话术，默认是['数据视图', '关闭', '刷新']，如需改写，可自定义
+            
+            magicType，动态类型切换，支持直角系下的折线图、柱状图、堆积、平铺转换，上图icon左数6~14，分别是切换为堆积，切换为平铺，切换折线图，切换柱形图，切换为力导向布局图，切换为和弦图，切换为饼图，切换为漏斗图
+            {Array} type ['line', 'bar', 'stack', 'tiled', 'force', 'chord', 'pie', 'funnel']
+            {Object=} option 可选，可传入切换是动态修改的配置，将复写series内的数组项
+            
+            restore，还原，复位原始图表，上图icon右数2
+            
+            saveAsImage，保存图片（IE8-不支持），上图icon最右，可设置更多属性
+            {string=} type 默认保存图片类型为'png'，需改为'jpeg'
+            {string=} name 指定图片名称，如不指定，则用图表title标题，如无title标题则图片名称默认为“ECharts”
+            {string=} lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.Feature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.mark">
+            <summary>
+            mark，辅助线标志，上图icon左数1/2/3，分别是启用，删除上一条，删除全部，可设置更多属性
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.dataZoom">
+            <summary>
+            dataZoom，框选区域缩放，自动与存在的dataZoom控件同步，上图icon左数4/5，分别是启用，缩放后退
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.dataView">
+            <summary>
+            dataView，数据视图，上图icon左数6，打开数据视图，可设置更多属性
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.magicType">
+            <summary>
+            magicType，动态类型切换，支持直角系下的折线图、柱状图、堆积、平铺转换，上图icon左数6~14，分别是切换为堆积，切换为平铺，切换折线图，切换柱形图，切换为力导向布局图，切换为和弦图，切换为饼图，切换为漏斗图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.restore">
+            <summary>
+            restore，还原，复位原始图表，上图icon右数2
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Feature.saveAsImage">
+            <summary>
+            saveAsImage，保存图片（IE8-不支持），上图icon最右，可设置更多属性
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.Mark">
+            <summary>
+            mark，辅助线标志，上图icon左数1/2/3，分别是启用，删除上一条，删除全部，可设置更多属性
+            可传入lineStyle（详见lineStyle）控制线条样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Mark.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Mark.title">
+            <summary>
+            辅助线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Mark.lineStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.MarkTitle">
+            <summary>
+            辅助线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MarkTitle.mark">
+            <summary>
+            辅助线开关
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MarkTitle.markUndo">
+            <summary>
+            删除辅助线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MarkTitle.markClear">
+            <summary>
+            清空辅助线
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.DataZoom">
+            <summary>
+            dataZoom，框选区域缩放，自动与存在的dataZoom控件同步，上图icon左数4/5，分别是启用，缩放后退
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataZoom.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataZoom.title">
+            <summary>
+            区域缩放
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.DataZoomTitle">
+            <summary>
+            区域缩放
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataZoomTitle.dataZoom">
+            <summary>
+            区域缩放
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataZoomTitle.dataZoomReset">
+            <summary>
+            区域缩放后退
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.DataView">
+            <summary>
+            dataView，数据视图，上图icon左数6，打开数据视图，可设置更多属性
+            {boolean=} readOnly 默认数据视图为只读，可指定readOnly为false打开编辑功能
+            {Function=} optionToContent 自主编排数据视图的显示内容
+            {Function=} contentToOption 当数据视图readOnly为false时，会出现刷新按钮，如果是自主编排的显示内容，如何翻转也请自理
+            {Array=} lang 数据视图上有三个话术，默认是['数据视图', '关闭', '刷新']，如需改写，可自定义
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataView.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataView.title">
+            <summary>
+            数据视图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataView.readOnly">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.DataView.lang">
+            <summary>
+             ['数据视图', '关闭', '刷新']
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.MagicType">
+            <summary>
+            magicType，动态类型切换，支持直角系下的折线图、柱状图、堆积、平铺转换，上图icon左数6~14，分别是切换为堆积，切换为平铺，切换折线图，切换柱形图，切换为力导向布局图，切换为和弦图，切换为饼图，切换为漏斗图
+            {Array} type ['line', 'bar', 'stack', 'tiled', 'force', 'chord', 'pie', 'funnel']
+            {Object=} option 可选，可传入切换是动态修改的配置，将复写series内的数组项
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicType.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicType.title">
+            <summary>
+            图切换
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicType.type">
+            <summary>
+            ['line', 'bar', 'stack', 'tiled', 'force', 'chord', 'pie', 'funnel']
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.MagicTypeTitle">
+            <summary>
+            图切换
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.line">
+            <summary>
+            '折线图切换'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.bar">
+            <summary>
+            '柱形图切换'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.stack">
+            <summary>
+            '堆积'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.tiled">
+            <summary>
+            '平铺'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.force">
+            <summary>
+            '力导向布局图切换'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.chord">
+            <summary>
+            '和弦图切换'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.pie">
+            <summary>
+            '饼图切换'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.MagicTypeTitle.funnel">
+            <summary>
+            '漏斗图切换'
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.Restore">
+            <summary>
+            restore，还原，复位原始图表，上图icon右数2
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Restore.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.Restore.title">
+            <summary>
+            '还原'
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.SaveAsImage">
+            <summary>
+            saveAsImage，保存图片（IE8-不支持），上图icon最右，可设置更多属性
+            {string=} type 默认保存图片类型为'png'，需改为'jpeg'
+            {string=} name 指定图片名称，如不指定，则用图表title标题，如无title标题则图片名称默认为“ECharts”
+            {string=} lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SaveAsImage.show">
+            <summary>
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SaveAsImage.title">
+            <summary>
+            '保存为图片'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SaveAsImage.type">
+            <summary>
+            'png'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.SaveAsImage.lang">
+            <summary>
+            ['点击保存'] 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.ChartTooltip">
+            <summary>
+            提示框，鼠标悬浮交互时的信息提示。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.show">
+            <summary>
+            默认值：true
+            显示策略，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.zlevel">
+            <summary>
+            默认值：1
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.z">
+            <summary>
+            默认值：8
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.showContent">
+            <summary>
+            默认值：true
+            tooltip主体内容显示策略，只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为false，可选为：true（显示） | false（隐藏）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.trigger">
+            <summary>
+            默认值：'item'
+            发类型，默认数据触发，见下图，可选为：'item' | 'axis'
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.position">
+            <summary>
+            默认值：null
+            位置指定，传入{Array}，如[x, y]， 固定位置[x, y]；传入{Function}，如function([x, y]) {return [newX,newY]}，默认显示坐标为输入参数，用户指定的新坐标为输出返回。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.formatter">
+            <summary>
+            默认值：null
+            内容格式器：{string}（Template） | {Function}，支持异步回调见表格下方
+            </summary>
+        </member>
+        <!-- 对于成员“P:EChartPackage.ChartComponent.ChartTooltip.islandFormatter”忽略有格式错误的 XML 注释 -->
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.showDelay">
+            <summary>
+            默认值：20
+            显示延迟，添加显示延迟可以避免频繁切换，特别是在详情内容需要异步获取的场景，单位ms
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.hideDelay">
+            <summary>
+            默认值：100
+            隐藏延迟，单位ms
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.transitionDuration">
+            <summary>
+            默认值：0.4
+            动画变换时长，单位s，如果你希望tooltip的跟随实时响应，showDelay设置为0是关键，同时transitionDuration设0也会有交互体验上的差别。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.enterable">
+            <summary>
+            默认值：false
+            鼠标是否可进入详情气泡中，默认为false，如需详情内交互，如添加链接，按钮，可设置为true。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.backgroundColor">
+            <summary>
+            默认值：'rgba(0,0,0,0.7)'
+            提示背景颜色，默认为透明度为0.7的黑色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.borderColor">
+            <summary>
+            默认值：'#333'
+            提示边框颜色
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.borderRadius">
+            <summary>
+            默认值：4
+            提示边框圆角，单位px，默认为4
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.borderWidth">
+            <summary>
+            默认值：0
+            提示边框线宽，单位px，默认为0（无边框）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.padding">
+            <summary>
+            默认值：5
+            提示内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.axisPointer">
+            <summary>
+            默认值：{
+                type: 'line',
+                lineStyle: {
+                    color: '#48b',
+                    width: 2,
+                    type: 'solid'
+                },
+                crossStyle: {
+                    color: '#1e90ff',
+                    width: 1,
+                    type: 'dashed'
+                },
+                shadowStyle: {
+                    color: 'rgba(150,150,150,0.3)',
+                    width: 'auto',
+                    type: 'default'
+                }
+            }
+            坐标轴指示器，默认type为line，可选为：'line' | 'cross' | 'shadow' | 'none'(无)，指定type后对应style生效，见下 
+            lineStyle设置直线指示器（详见lineStyle）, 
+            crossStyle设置十字准星指示器（详见lineStyle）, 
+            shadowStyle设置阴影指示器（详见areaStyle），areaStyle.size默认为'auto'自动计算，可指定具体宽度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.ChartTooltip.textStyle">
+            <summary>
+            默认值：{ color:'#fff' }
+            文本样式，默认为白色字体（详见textStyle）
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartComponent.AxisPointer">
+            <summary>
+            坐标轴指示器
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisPointer.type">
+            <summary>
+            默认type为line，可选为：'line' | 'cross' | 'shadow' | 'none'(无)，指定type后对应style生效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisPointer.lineStyle">
+            <summary>
+            （详见lineStyle）lineStyle设置直线指示器
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisPointer.crossStyle">
+            <summary>
+            （详见lineStyle）crossStyle设置十字准星指示器
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartComponent.AxisPointer.shadowStyle">
+            <summary>
+            （详见areaStyle）shadowStyle设置阴影指示器，areaStyle.size默认为'auto'自动计算，可指定具体宽度
+            </summary>
+        </member>
+        <member name="T:EchartLib.ChartOpertation">
+            <summary>
+            图表操作数据处理类
+            </summary>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartPieDataProcess(System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartPieSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            饼状图数据处理
+            </summary>
+            <param name="lengendData">图例数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="charttitle">主标题文本，默认值：''，'\n'指定换行</param>
+            <param name="chatsubtitle"> 副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable"> 是否启用拖拽重计算特性，默认关闭</param>
+            <returns></returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String)">
+            <summary>
+            线性图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.TimeLineChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String,EChartPackage.ChartComponent.ChartTimeline)">
+            <summary>
+            时间轴线性图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <param name="chartTimeline">时间轴</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean,System.String)">
+            <summary>
+            柱状图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartBarAndLineDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Collections.Generic.List{EChartPackage.ChartComponent.ChartAxis},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            折柱混搭
+            </summary>
+            <param name="charttitle"></param>
+            <param name="chartAxisData"></param>
+            <param name="seriesData"></param>
+            <param name="lengendData"></param>
+            <param name="chartYaxis"></param>
+            <param name="chartGrid"></param>
+            <param name="isShowlengend"></param>
+            <param name="chatsubtitle"></param>
+            <param name="isCalculable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            条形图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="isShowX">X轴是否显示</param>
+            <param name="isShowY">Y轴是否显示</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartDuoWeiTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},EChartPackage.ChartComponent.ChartLegend,EChartPackage.ChartComponent.ChartGrid,System.String,System.Boolean)">
+            <summary>
+            多维条形图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="chartLegend">图例</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartChordSeries">
+            <summary>
+            适用类型:和弦图
+            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartComSeries">
+            <summary>
+            适用类型：通用
+            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据，其中个别选项仅在部分图表类型中有效，请注意适用类型
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.zlevel">
+            <summary>
+            默认值：0
+            适用类型：通用
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.z">
+            <summary>
+            默认值：2
+            适用类型：通用
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.type">
+             <summary>
+             默认值：null
+             适用类型：通用
+             图表类型，必要参数！如为空或不支持类型，则该系列数据不被显示。可选为：
+            'line'（折线图） | 'bar'（柱状图） | 'scatter'（散点图） | 'k'（K线图）
+            'pie'（饼图） | 'radar'（雷达图） | 'chord'（和弦图） | 'force'（力导向布局图） | 'map'（地图） 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.name">
+            <summary>
+            默认值：null
+            适用类型：通用
+            系列名称，如启用legend，该值将被legend.data索引相关 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.tooltip">
+            <summary>
+            默认值：null
+            适用类型：通用
+            提示框样式，仅对本系列有效，如不设则用option.tooltip,鼠标悬浮交互时的信息提示 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.clickable">
+            <summary>
+            默认值：true
+            适用类型：通用
+            数据图形是否可点击，默认开启，如果没有click事件响应可以关闭 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.itemStyle">
+            <summary>
+            默认值：null
+            适用类型：通用
+            图形样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.data">
+            <summary>
+            默认值：[]
+            适用类型：通用
+            系列中的数据内容数组
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markPoint">
+            <summary>
+            默认值：{}
+            适用类型：通用
+            系列中的数据标注内容
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markLine">
+            <summary>
+            默认值：{}
+            适用类型：通用
+            系列中的数据标线内容
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.categories">
+            <summary>
+            默认值：null
+            节点分类, 详见图数据结构表示中的categories
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.nodes">
+            <summary>
+            和弦图的顶点数据
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.links">
+            <summary>
+            默认值：[]
+            和弦图的边数据, 和matrix二选一 详见图数据结构表示中的links
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.matrix">
+            <summary>
+            默认值：[]
+            和弦图的邻接矩阵, 和links二选一 详见图数据结构表示中的matrix
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.ribbonType">
+            <summary>
+            默认值:true
+            ribbonType的和弦图节点使用扇形绘制，边使用有大小端的ribbon绘制，可以表示出边的权重，图的节点边之间必须是双向边，非ribbonType的和弦图节点使用symbol绘制，边使用贝塞尔曲线，不能表示边的权重，但是可以使用单向边
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.symbol">
+             <summary>
+             默认值：null
+             同series（直角系）, ribbonType为false时有效
+             标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'），默认循环选择类型有：
+            'circle' | 'rectangle' | 'triangle' | 'diamond' |
+            'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
+            另外，还支持五种更特别的标志图形'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'star' + n（n>=3)可变化出N角星，如指定为'star6'则可以显示6角星
+            自1.3.5起支持symbol为自定义图片，格式为'image://' + '图片路径'， 如'image://../asset/ico/favicon.png' 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.symbolSize">
+            <summary>
+            节点的大小, ribbonType为false时有效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.minRadius">
+            <summary>
+            默认值：10
+            顶点数据映射成symbol半径后的最小半径, ribbonType为false时有效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.maxRadius">
+            <summary>
+            默认值：20
+            顶点数据映射成symbol半径后的最大半径, ribbonType为false时有效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.showScale">
+            <summary>
+            默认值：false
+            是否显示刻度, ribbonType为true时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.showScaleText">
+            <summary>
+            默认值：false
+            是否显示刻度文字, ribbonType为true时有效 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.padding">
+            <summary>
+            默认值：2
+            每个sector之间的间距(用角度表示) 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.sort">
+            <summary>
+            默认值：'none' 
+            数据排序， 可以取none, ascending, descending
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.sortSub">
+            <summary>
+            默认值：'none' 
+            数据排序（弦）， 可以取none, ascending, descending
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartChordSeries.clockWise">
+            <summary>
+            默认值：false
+            显示是否顺时针 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.links">
+            <summary>
+            和弦图和力导向图等图的数据表示需要一个图的数据结构，Echarts中可以使用nodes或者data来表示节点数据，用links或者邻接矩阵matrix表示边, 对于每个节点可以通过一个额外的category配置节点的分类。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.links.source">
+            <summary>
+            源节点的index或者源节点的name 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.links.target">
+            <summary>
+            目标节点的index或者目标节点的name 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.links.weight">
+            <summary>
+            边的权重 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.name">
+            <summary>
+            节点名称 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.label">
+            <summary>
+            节点标签名称，默认显示name作为标签 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.value">
+            <summary>
+            节点值，如果不设置会取所有边的权重(weight)和 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.ignore">
+             <summary>
+             默认值：false
+            是否忽略该节点
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.symbol">
+             <summary>
+             默认值：null
+             标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'），默认循环选择类型有：
+            'circle' | 'rectangle' | 'triangle' | 'diamond' |
+            'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
+            另外，还支持五种更特别的标志图形'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'star' + n（n>=3)可变化出N角星，如指定为'star6'则可以显示6角星
+            自1.3.5起支持symbol为自定义图片，格式为'image://' + '图片路径'， 如'image://../asset/ico/favicon.png' 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.symbolSize">
+            <summary>
+            强制指定节点的大小 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.category">
+            <summary>
+            默认值：0
+            节点的 category index 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.nodes.itemStyle">
+            <summary>
+            详见 itemStyle，注意力导向图单个节点的 itemStyle 中没有 nodeStyle 的配置项，而是直接使用 normal(emphasis) 下的 color, borderWidth 和 borderColor
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartSeriesData">
+            <summary>
+            series序列组的数据
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartSeriesData.itemStyle">
+            <summary>
+            文本样式
+            详见 itemStyle，注意力导向图单个节点的 itemStyle 中没有 nodeStyle 的配置项，而是直接使用 normal(emphasis) 下的 color, borderWidth 和 borderColor
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.markPoint">
+            <summary>
+            系列中的数据标注内容
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.clickable">
+            <summary>
+            默认值：true
+            数据图形是否可点击，默认开启，如果没有click事件响应可以关闭 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.symbol">
+             <summary>
+             默认值：'pin'
+             标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'），默认循环选择类型有：
+            'circle' | 'rectangle' | 'triangle' | 'diamond' |
+            'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
+            另外，还支持五种更特别的标志图形'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'star' + n（n>=3)可变化出N角星，如指定为'star6'则可以显示6角星
+            自1.3.5起支持symbol为自定义图片，格式为'image://' + '图片路径'， 如'image://../asset/ico/favicon.png' 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.symbolRotate">
+            <summary>
+            默认值：null
+            适用类型：折线图 ，散点图 
+            标志图形旋转角度[-180,180]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.large">
+            <summary>
+            默认值：false
+            是否启动大规模标注模式 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.effect">
+             <summary>
+             默认值：{
+            show: false,
+            type: 'scale',
+            loop: true,
+            period: 15,
+            scaleSize : 2,
+            bounceDistance: 10,
+            color : null,
+            shadowColor : null,
+            shadowBlur : 0
+            }          
+             标注图形炫光特效:
+            show 是否开启，默认关闭
+            type 特效类型，默认为'scale'（放大），可选还有'bounce'（跳动）
+            loop 循环动画，默认开启,
+            period 运动周期，无单位，值越大越慢，默认为15
+            scaleSize 放大倍数，以markPoint symbolSize为基准，type为scale时有效
+            bounceDistance 跳动距离，单位为px，type为bounce时有效
+            color 炫光颜色，默认跟随markPoint itemStyle定义颜色,
+            shadowColor 光影颜色，默认跟随color
+            shadowBlur 光影模糊度，默认为0 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.itemStyle">
+            <summary>
+            默认值：{...} 
+            标注图形样式属性，同series中的itemStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.geoCoord">
+            <summary>
+            默认值：{} 
+            地图特有，标注图形定位坐标，同series中的geoCoord
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPoint.data">
+            <summary>
+            默认值：[]
+            标注的数据内容数组
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.markPointdata">
+             <summary>
+             标注的数据内容数组，最直接的数据项可直接指定标注位置（x，y）以及相关名称（name）和值（value），在饼图、雷达图、力导、和弦图中基本如下:
+             data : [
+            {name: '标注1', value: 100, x: 50, y: 20},
+            {name: '标注2', value: 200, x: 150, y: 120},
+            ...
+            ]
+             在存在直角坐标系的图表如折线、柱形、K线、散点图中，除了通过直接指定位置外，如果希望标注基于直角系的定位，可以通过xAxis，yAxis实现，这两个值都会根据坐标轴类型以及传入参数的不同自动换算如下：
+             data : [
+            {name: '标注1', value: 100, xAxis: 1, yAxis: 20},      // 当xAxis为类目轴时，数值1会被理解为类目轴的index
+            {name: '标注2', value: 100, xAxis: '周三', yAxis: 20}, // 当xAxis为类目轴时，字符串'周三'会被理解为与类目轴的文本进行匹配
+            {name: '标注3', value: 200, xAxis: 10, yAxis: 20},     // 当xAxis或yAxis为数值轴时，不管传入是什么，都被理解为数值后做空间位置换算
+             ...
+            ]
+             更为实用的，在折线、柱形、散点图中，可以直接使用如下几个开箱即用的特殊点标注
+             data : [
+            {type : 'max', name: '自定义名字'},    // 最大值
+            {type : 'min', name: '自定义名字'}     // 最小值
+            ]
+             标注数据比较特殊也最为常用的地图上，除了直接位置定位外，如果希望基于地理坐标标注，并且能够随地图漫游缩放，需要为markPoint提供一份geoCoord，如下
+             data : [
+            {name: '北京', value: 100},
+            {name: '上海', value: 200},
+            ...
+            ],
+            geoCoord : {
+            "北京":[116.46,39.92],           // 支持数组[经度，维度]
+            "上海": {x: 121.48, y: 31.22},   // 支持对象{x:经度,y:纬度}
+             ...
+            }
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.type">
+            <summary>
+            标注类型
+            min:最小值
+            max：最大值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.x">
+            <summary>
+            标注X轴位置
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.y">
+            <summary>
+            标注Y轴位置
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.xAxis">
+            <summary>
+            标注基于直角系X轴的定位
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.yAxis">
+            <summary>
+            标注基于直角系Y轴的定位
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markPointdata.symbolSize">
+            <summary>
+            标注图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.markLine">
+            <summary>
+            系列中的数据标线内容
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.clickable">
+            <summary>
+            默认值：true
+            数据图形是否可点击，默认开启，如果没有click事件响应可以关闭 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.symbol">
+            <summary>
+            默认值：['circle', 'arrow'] 
+            标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.symbolSize">
+            <summary>
+            默认值：[2, 4] 
+            标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.symbolRotate">
+            <summary>
+            默认值：null
+            适用类型：折线图 ，散点图 
+            标志图形旋转角度[-180,180]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.large">
+             <summary>
+             默认值：false
+             是否启用大规模标线模式，默认关闭。
+            大规模标线模式下会优化标线绘制，同个系列的的所有标线都会使用同一种样式，并且忽略标线两端 symbol 的绘制。 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.smooth">
+            <summary>
+            默认值：false
+            平滑曲线显示，smooth为true时lineStyle不支持虚线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.smoothness">
+            <summary>
+            默认值：0.2
+            平滑曲线弧度，smooth为true时有效，指定平滑曲线弧度
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.precision">
+            <summary>
+            默认值：2
+            小数精度，使用开箱即用的均线markLine时有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.bundling">
+             <summary>
+             边捆绑：
+            enable 是否使用边捆绑，默认关闭
+            maxTurningAngle 边捆绑算法参数，可选 [0, 90] 的角度，配置捆绑后的边最大拐角, 默认为 45 度
+            注：捆绑算法使用 Multilevel Agglomerative Edge Bundling for Visualizing Large Graphs 
+             默认值：
+             {
+            enable: false,
+            maxTurningAngle: 45
+            }
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.effect">
+             <summary>
+             标线图形炫光特效:
+            show 是否开启，默认关闭
+            loop 循环动画，默认开启,
+            period 运动周期，无单位，值越大越慢，默认为15
+            scaleSize 放大倍数，以markLine lineWidth为基准
+            color 炫光颜色，默认跟随markLine itemStyle定义颜色,
+            shadowColor 光影颜色，默认跟随color
+            shadowBlur 光影模糊度，默认根据scaleSize计算 
+             {
+            show: false,
+            loop: true,
+            period: 15,
+            scaleSize : 2,
+            color : null,
+            shadowColor : null,
+            shadowBlur : null
+            }           
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.itemStyle">
+            <summary>
+            标线图形样式属性，同series中的itemStyle
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.geoCoord">
+            <summary>
+            地图特有，标线图形定位坐标，同series中的geoCoord
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLine.data">
+            <summary>
+            标注图形数据
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.markLinedata">
+             <summary>
+             标线的数据内容数组，最直接的数据项可直接指定标线起始和结束位置（x，y）以及相关名称（name）和值（value），在饼图、雷达图、力导、和弦图中基本如下:
+             data : [
+            [
+                {name: '标线1起点', value: 100, x: 50, y: 20}, 
+                {name: '标线1终点', x: 150, y: 120}
+            ],
+            [
+                {name: '标线2起点', value: 200, x: 30, y: 80}, 
+                {name: '标线2终点', x: 270, y: 190}
+            ],
+            ...
+            ]
+             在存在直角坐标系的图表如折线、柱形、K线、散点图中，除了通过直接指定位置外，如果希望标线基于直角系的定位，可以通过xAxis，yAxis实现，这两个值都会根据坐标轴类型以及传入参数的不同自动换算如下：
+             data : [
+            [
+                {name: '标线1起点', value: 100, xAxis: 1, yAxis: 20},      // 当xAxis为类目轴时，数值1会被理解为类目轴的index，通过xAxis:-1|MAXNUMBER可以让线到达grid边缘
+                {name: '标线1终点', xAxis: '周三', yAxis: 20},             // 当xAxis为类目轴时，字符串'周三'会被理解为与类目轴的文本进行匹配
+            ],
+            [
+                {name: '标线2起点', value: 200, xAxis: 10, yAxis: 20},     // 当xAxis或yAxis为数值轴时，不管传入是什么，都被理解为数值后做空间位置换算
+                {name: '标线2终点', xAxis: 270, yAxis: 190}
+            ],
+            ...
+            ]
+             更为实用的，在折线、柱形、散点图中，可以直接使用如下几个开箱即用的特殊点作为标线类型
+             data : [
+            {type : 'max', name: '自定义名字'},    // 最大值水平线或垂直线
+            {type : 'min', name: '自定义名字'},    // 最小值水平线或垂直线
+            {type : 'average', name: '自定义名字'},// 平均值水平线或垂直线
+            
+             最小值指向最大值的连线
+            [
+                {type : 'min', name: '自定义名字'},
+                {type : 'max', name: '自定义名字'}
+            ],
+            
+             散点图中存在两个数值型坐标，默认用纵轴值计算特殊点，可以通过valueIndex:0指定为横轴特殊点
+            {type : 'max', name: '自定义名字', valueIndex:0} 
+            ]
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.name">
+            <summary>
+            数据标线名称
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.value">
+            <summary>
+            数据标线值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.type">
+            <summary>
+            水平线或垂直线类型
+            max:最大值水平线或垂直线
+            min:最小值水平线或垂直线
+            average:平均值水平线或垂直线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.x">
+            <summary>
+            数据标线起始位置
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.y">
+            <summary>
+            数据标线结束位置
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.xAxis">
+            <summary>
+            数据标线基于直角系X轴的定位
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.markLinedata.yAxis">
+            <summary>
+            数据标线基于直角系Y轴的定位
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartGanGeSeries">
+            <summary>
+            仪表盘
+            驱动图表生成的数据内容数组
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.center">
+            <summary>
+            默认值：['50%', '50%'] 
+            圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50% 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.radius">
+            <summary>
+            默认值：[0, '75%'] 
+            半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%， 传数组实现环形图，[内半径，外半径] 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.startAngle">
+            <summary>
+            默认值：90
+            开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.endAngle">
+            <summary>
+            默认值：0
+            最小角度，可用于防止某item的值过小而影响交互 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.min">
+            <summary>
+            指定的最小值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.max">
+            <summary>
+            指定的最大值
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.splitNumber">
+            <summary>
+            分割段数，默认为10
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.axisLine">
+            <summary>
+            坐标轴线，默认显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.axisTick">
+            <summary>
+            坐标轴小标记，默认显示
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.axisLabel">
+            <summary>
+            坐标轴文本标签
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.pointer">
+            <summary>
+            指针样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.detail">
+            <summary>
+            仪表盘详情
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.title">
+            <summary>
+            仪表盘标题
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartGanGeSeries.splitLine">
+            <summary>
+            主分割线，默认显示
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartPieSeries">
+            <summary>
+            适用类型:饼图
+            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.center">
+            <summary>
+            默认值：['50%', '50%'] 
+            圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50% 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.radius">
+            <summary>
+            默认值：[0, '75%'] 
+            半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%， 传数组实现环形图，[内半径，外半径] 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.startAngle">
+            <summary>
+            默认值：90
+            开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.minAngle">
+            <summary>
+            默认值：0
+            最小角度，可用于防止某item的值过小而影响交互 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.clockWise">
+            <summary>
+            默认值：true
+            显示是否顺时针 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.roseType">
+            <summary>
+            默认值：null
+            南丁格尔玫瑰图模式，'radius'（半径） | 'area'（面积）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.selectedOffset">
+            <summary>
+            默认值：10
+            选中是扇区偏移量 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.selectedMode">
+            <summary>
+            默认值：null
+            选中模式，默认关闭，可选single，multiple 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartPieSeries.legendHoverLink">
+            <summary>
+            默认值：true
+            是否启用图例（legend）hover时的联动响应（高亮显示） 
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartRadarSeries">
+            <summary>
+            适用类型:雷达图
+            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.polarIndex">
+            <summary>
+            默认值：0
+            极坐标索引 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.symbol">
+             <summary>
+             默认值：null
+             标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'），默认循环选择类型有：
+            'circle' | 'rectangle' | 'triangle' | 'diamond' |
+            'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
+            另外，还支持五种更特别的标志图形'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'star' + n（n>=3)可变化出N角星，如指定为'star6'则可以显示6角星
+            自1.3.5起支持symbol为自定义图片，格式为'image://' + '图片路径'， 如'image://../asset/ico/favicon.png' 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.symbolSize">
+            <summary>
+            适用类型：折线图，散点图 
+            默认值：2 | 4
+            标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.symbolRotate">
+            <summary>
+            适用类型:折线图 ，散点图
+            默认值：null
+            标志图形旋转角度[-180,180]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.legendHoverLink">
+            <summary>
+            默认值：true
+            是否启用图例（legend）hover时的联动响应（高亮显示） 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRadarSeries.data">
+            <summary>
+            默认值：[]
+            适用类型：雷达图
+            系列中的数据内容数组
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartRadarSeriesData">
+            <summary>
+            series序列组的数据
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartRightangleSeries">
+            <summary>
+            series（直角系）
+            驱动图表生成的数据内容数组 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.stack">
+            <summary>
+            默认值：null
+            适用类型:折线图，柱状图 
+            组合名称，双数值轴时无效，多组数据的堆积图时使用，eg：stack:'group1'，则series数组中stack值等于'group1'的数据做堆积计算 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.xAxisIndex">
+             <summary>
+             默认值：0
+             适用类型:折线图，柱状图，散点图 ，K线图
+            xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.yAxisIndex">
+            <summary>
+            默认值：0
+            适用类型:折线图，柱状图，散点图 ，K线图
+            yAxis坐标轴数组的索引，指定该系列数据所用的纵坐标轴 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.barGap">
+            <summary>
+            默认值：'30%'
+            适用类型:柱状图
+            柱间距离，默认为柱形宽度的30%，可设固定值 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.barCategoryGap">
+            <summary>
+            默认值：'20%'
+            适用类型:柱状图
+            类目间柱形距离，默认为类目间距的20%，可设固定值 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.barMinHeight">
+            <summary>
+            默认值：0
+            适用类型:柱状图
+            柱条最小高度，可用于防止某item的值过小而影响交互 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.barWidth">
+            <summary>
+            默认值：自适应
+            适用类型:柱状图 ，K线图
+            柱条（K线蜡烛）宽度，不设时自适应 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.barMaxWidth">
+            <summary>
+            默认值：自适应
+            适用类型:柱状图 ，K线图
+            柱条（K线蜡烛）最大宽度，不设时自适应 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.symbol">
+             <summary>
+             默认值：null
+             标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'），默认循环选择类型有：
+            'circle' | 'rectangle' | 'triangle' | 'diamond' |
+            'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
+            另外，还支持五种更特别的标志图形'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'star' + n（n>=3)可变化出N角星，如指定为'star6'则可以显示6角星
+            自1.3.5起支持symbol为自定义图片，格式为'image://' + '图片路径'， 如'image://../asset/ico/favicon.png' 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.symbolSize">
+            <summary>
+            默认值：2 | 4
+            适用类型:折线图 (2)，散点图(4) 
+            标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.symbolRotate">
+            <summary>
+            默认值：null
+            适用类型:折线图 ，散点图
+            标志图形旋转角度[-180,180]
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.showAllSymbol">
+            <summary>
+            默认值：false
+            适用类型:折线图
+            标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.smooth">
+            <summary>
+            默认值：false
+            适用类型:折线图
+            平滑曲线显示，smooth为true时lineStyle不支持虚线
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.dataFilter">
+             <summary>
+             默认值：'nearst'
+             适用类型:折线图
+             ECharts 会在折线图的数据数量大于实际显示的像素宽度（高度）的时候会启用优化，对显示在一个像素宽度内的数据做筛选，该选项是指明数据筛选的策略。
+            可选 'nearest', 'min', 'max', 'average'。或者是使用自定义的筛选函数
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.large">
+            <summary>
+            默认值：false
+            适用类型:散点图
+            启动大规模散点图
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.largeThreshold">
+            <summary>
+            默认值：2000
+            适用类型:散点图
+            大规模散点图自动切换阀值，large为true下有效
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartRightangleSeries.legendHoverLink">
+            <summary>
+            默认值：true
+            适用类型:折线图，柱状图，散点图 
+            是否启用图例（legend）hover时的联动响应（高亮显示）
+            </summary>
+        </member>
+        <member name="T:EchartLib.JsonHelper">
+            <summary>
+            json辅助
+            </summary>
+        </member>
+        <member name="M:EchartLib.JsonHelper.ToJson(System.Object)">
+            <summary>
+            object转json（包含日期格式处理）
+            </summary>
+            <param name="obj">object</param>
+            <returns></returns>
+        </member>
+        <member name="M:EchartLib.JsonHelper.JsonToList(System.String)">
+            <summary>
+            json字符串数组转换为List
+            </summary>
+            <param name="str">json字符串数组</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
