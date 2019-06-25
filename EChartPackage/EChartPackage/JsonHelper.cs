@@ -23,7 +23,7 @@ namespace EchartLib
         /// <returns></returns>
         public static string ToJson(this object obj)
         {
-            var jSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Include };
+            var jSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
             var json = JsonConvert.SerializeObject(obj, (Newtonsoft.Json.Formatting)Formatting.Indented, jSetting);
             var data = JsonConvert.DeserializeObject(json, typeof(object), jSetting);
             var timeConverter = new Newtonsoft.Json.Converters.IsoDateTimeConverter { DateTimeFormat = "yyyy'-'MM'-'dd hh:mm" };

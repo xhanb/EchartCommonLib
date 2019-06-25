@@ -2371,7 +2371,7 @@
             内容格式器：{string}（Template） | {Function}，支持异步回调见表格下方
             </summary>
         </member>
-        <!-- 对于成员“P:EChartPackage.ChartComponent.ChartTooltip.islandFormatter”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "P:EChartPackage.ChartComponent.ChartTooltip.islandFormatter" -->
         <member name="P:EChartPackage.ChartComponent.ChartTooltip.showDelay">
             <summary>
             默认值：20
@@ -2483,195 +2483,10 @@
             （详见areaStyle）shadowStyle设置阴影指示器，areaStyle.size默认为'auto'自动计算，可指定具体宽度
             </summary>
         </member>
-        <member name="T:EchartLib.ChartOpertation">
-            <summary>
-            图表操作数据处理类
-            </summary>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartPieDataProcess(System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartPieSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.String,System.Boolean)">
-            <summary>
-            饼状图数据处理
-            </summary>
-            <param name="lengendData">图例数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="isShowlengend">是否开启图例</param>
-            <param name="charttitle">主标题文本，默认值：''，'\n'指定换行</param>
-            <param name="chatsubtitle"> 副标题文本，默认值：''，'\n'指定换行</param>
-            <param name="isCalculable"> 是否启用拖拽重计算特性，默认关闭</param>
-            <returns></returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String)">
-            <summary>
-            线性图数据处理
-            </summary>
-            <param name="charttitle">标题</param>
-            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
-            <param name="chartAxisData">坐标轴数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="lengendData">图例数据</param>
-            <param name="isShowlengend">是否开启图例</param>
-            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
-            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
-            <param name="chartYAxisName">Y轴名称</param>
-            <returns>图表所有数据</returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.TimeLineChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String,EChartPackage.ChartComponent.ChartTimeline)">
-            <summary>
-            时间轴线性图数据处理
-            </summary>
-            <param name="charttitle">标题</param>
-            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
-            <param name="chartAxisData">坐标轴数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="lengendData">图例数据</param>
-            <param name="isShowlengend">是否开启图例</param>
-            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
-            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
-            <param name="chartYAxisName">Y轴名称</param>
-            <param name="chartTimeline">时间轴</param>
-            <returns>图表所有数据</returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean,System.String)">
-            <summary>
-            柱状图数据处理
-            </summary>
-            <param name="charttitle">标题</param>
-            <param name="chartAxisData">坐标轴数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="lengendData">图例数据</param>
-            <param name="chartGrid">直角坐标系内绘图网格</param>
-            <param name="isShowlengend">是否开启图例</param>
-            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
-            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
-            <param name="chartYAxisName">Y轴名称</param>
-            <returns>图表所有数据</returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartBarAndLineDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Collections.Generic.List{EChartPackage.ChartComponent.ChartAxis},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean)">
-            <summary>
-            折柱混搭
-            </summary>
-            <param name="charttitle"></param>
-            <param name="chartAxisData"></param>
-            <param name="seriesData"></param>
-            <param name="lengendData"></param>
-            <param name="chartYaxis"></param>
-            <param name="chartGrid"></param>
-            <param name="isShowlengend"></param>
-            <param name="chatsubtitle"></param>
-            <param name="isCalculable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.Boolean,System.Boolean)">
-            <summary>
-            条形图数据处理
-            </summary>
-            <param name="charttitle">标题</param>
-            <param name="chartAxisData">坐标轴数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="lengendData">图例数据</param>
-            <param name="chartGrid">直角坐标系内绘图网格</param>
-            <param name="isShowX">X轴是否显示</param>
-            <param name="isShowY">Y轴是否显示</param>
-            <param name="isShowlengend">是否开启图例</param>
-            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
-            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
-            <returns>图表所有数据</returns>
-        </member>
-        <member name="M:EchartLib.ChartOpertation.ChartDuoWeiTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},EChartPackage.ChartComponent.ChartLegend,EChartPackage.ChartComponent.ChartGrid,System.String,System.Boolean)">
-            <summary>
-            多维条形图数据处理
-            </summary>
-            <param name="charttitle">标题</param>
-            <param name="chartAxisData">坐标轴数据</param>
-            <param name="seriesData">图表数据</param>
-            <param name="chartLegend">图例</param>
-            <param name="chartGrid">直角坐标系内绘图网格</param>
-            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
-            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
-            <returns>图表所有数据</returns>
-        </member>
         <member name="T:EChartPackage.ChartSeries.ChartChordSeries">
             <summary>
             适用类型:和弦图
             驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据
-            </summary>
-        </member>
-        <member name="T:EChartPackage.ChartSeries.ChartComSeries">
-            <summary>
-            适用类型：通用
-            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据，其中个别选项仅在部分图表类型中有效，请注意适用类型
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.zlevel">
-            <summary>
-            默认值：0
-            适用类型：通用
-            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.z">
-            <summary>
-            默认值：2
-            适用类型：通用
-            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。 
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.type">
-             <summary>
-             默认值：null
-             适用类型：通用
-             图表类型，必要参数！如为空或不支持类型，则该系列数据不被显示。可选为：
-            'line'（折线图） | 'bar'（柱状图） | 'scatter'（散点图） | 'k'（K线图）
-            'pie'（饼图） | 'radar'（雷达图） | 'chord'（和弦图） | 'force'（力导向布局图） | 'map'（地图） 
-             </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.name">
-            <summary>
-            默认值：null
-            适用类型：通用
-            系列名称，如启用legend，该值将被legend.data索引相关 
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.tooltip">
-            <summary>
-            默认值：null
-            适用类型：通用
-            提示框样式，仅对本系列有效，如不设则用option.tooltip,鼠标悬浮交互时的信息提示 
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.clickable">
-            <summary>
-            默认值：true
-            适用类型：通用
-            数据图形是否可点击，默认开启，如果没有click事件响应可以关闭 
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.itemStyle">
-            <summary>
-            默认值：null
-            适用类型：通用
-            图形样式
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.data">
-            <summary>
-            默认值：[]
-            适用类型：通用
-            系列中的数据内容数组
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markPoint">
-            <summary>
-            默认值：{}
-            适用类型：通用
-            系列中的数据标注内容
-            </summary>
-        </member>
-        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markLine">
-            <summary>
-            默认值：{}
-            适用类型：通用
-            系列中的数据标线内容
             </summary>
         </member>
         <member name="P:EChartPackage.ChartSeries.ChartChordSeries.categories">
@@ -2832,6 +2647,84 @@
         <member name="P:EChartPackage.ChartSeries.nodes.itemStyle">
             <summary>
             详见 itemStyle，注意力导向图单个节点的 itemStyle 中没有 nodeStyle 的配置项，而是直接使用 normal(emphasis) 下的 color, borderWidth 和 borderColor
+            </summary>
+        </member>
+        <member name="T:EChartPackage.ChartSeries.ChartComSeries">
+            <summary>
+            适用类型：通用
+            驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据，其中个别选项仅在部分图表类型中有效，请注意适用类型
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.zlevel">
+            <summary>
+            默认值：0
+            适用类型：通用
+            一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制。
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.z">
+            <summary>
+            默认值：2
+            适用类型：通用
+            二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层。 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.type">
+             <summary>
+             默认值：null
+             适用类型：通用
+             图表类型，必要参数！如为空或不支持类型，则该系列数据不被显示。可选为：
+            'line'（折线图） | 'bar'（柱状图） | 'scatter'（散点图） | 'k'（K线图）
+            'pie'（饼图） | 'radar'（雷达图） | 'chord'（和弦图） | 'force'（力导向布局图） | 'map'（地图） 
+             </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.name">
+            <summary>
+            默认值：null
+            适用类型：通用
+            系列名称，如启用legend，该值将被legend.data索引相关 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.tooltip">
+            <summary>
+            默认值：null
+            适用类型：通用
+            提示框样式，仅对本系列有效，如不设则用option.tooltip,鼠标悬浮交互时的信息提示 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.clickable">
+            <summary>
+            默认值：true
+            适用类型：通用
+            数据图形是否可点击，默认开启，如果没有click事件响应可以关闭 
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.itemStyle">
+            <summary>
+            默认值：null
+            适用类型：通用
+            图形样式
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.data">
+            <summary>
+            默认值：[]
+            适用类型：通用
+            系列中的数据内容数组
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markPoint">
+            <summary>
+            默认值：{}
+            适用类型：通用
+            系列中的数据标注内容
+            </summary>
+        </member>
+        <member name="P:EChartPackage.ChartSeries.ChartComSeries.markLine">
+            <summary>
+            默认值：{}
+            适用类型：通用
+            系列中的数据标线内容
             </summary>
         </member>
         <member name="T:EChartPackage.ChartSeries.ChartSeriesData">
@@ -3504,6 +3397,113 @@
             适用类型:折线图，柱状图，散点图 
             是否启用图例（legend）hover时的联动响应（高亮显示）
             </summary>
+        </member>
+        <member name="T:EchartLib.ChartOpertation">
+            <summary>
+            图表操作数据处理类
+            </summary>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartPieDataProcess(System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartPieSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            饼状图数据处理
+            </summary>
+            <param name="lengendData">图例数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="charttitle">主标题文本，默认值：''，'\n'指定换行</param>
+            <param name="chatsubtitle"> 副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable"> 是否启用拖拽重计算特性，默认关闭</param>
+            <returns></returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String)">
+            <summary>
+            线性图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.TimeLineChartLineDataProcess(System.String,System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Boolean,System.String,System.Boolean,System.String,EChartPackage.ChartComponent.ChartTimeline)">
+            <summary>
+            时间轴线性图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="fm">y轴数据自定义单位，如“元”，“年”</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：""，"\n"指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <param name="chartTimeline">时间轴</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean,System.String)">
+            <summary>
+            柱状图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <param name="chartYAxisName">Y轴名称</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartBarAndLineDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},System.Collections.Generic.List{EChartPackage.ChartComponent.ChartAxis},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            折柱混搭
+            </summary>
+            <param name="charttitle"></param>
+            <param name="chartAxisData"></param>
+            <param name="seriesData"></param>
+            <param name="lengendData"></param>
+            <param name="chartYaxis"></param>
+            <param name="chartGrid"></param>
+            <param name="isShowlengend"></param>
+            <param name="chatsubtitle"></param>
+            <param name="isCalculable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},System.Collections.Generic.List{System.String},EChartPackage.ChartComponent.ChartGrid,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            条形图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="lengendData">图例数据</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="isShowX">X轴是否显示</param>
+            <param name="isShowY">Y轴是否显示</param>
+            <param name="isShowlengend">是否开启图例</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <returns>图表所有数据</returns>
+        </member>
+        <member name="M:EchartLib.ChartOpertation.ChartDuoWeiTiaoBarDataProcess(System.String,System.Collections.Generic.List{System.Object},System.Collections.Generic.IEnumerable{EChartPackage.ChartSeries.ChartRightangleSeries},EChartPackage.ChartComponent.ChartLegend,EChartPackage.ChartComponent.ChartGrid,System.String,System.Boolean)">
+            <summary>
+            多维条形图数据处理
+            </summary>
+            <param name="charttitle">标题</param>
+            <param name="chartAxisData">坐标轴数据</param>
+            <param name="seriesData">图表数据</param>
+            <param name="chartLegend">图例</param>
+            <param name="chartGrid">直角坐标系内绘图网格</param>
+            <param name="chatsubtitle">副标题文本，默认值：''，'\n'指定换行</param>
+            <param name="isCalculable">是否启用拖拽重计算特性，默认关闭</param>
+            <returns>图表所有数据</returns>
         </member>
         <member name="T:EchartLib.JsonHelper">
             <summary>

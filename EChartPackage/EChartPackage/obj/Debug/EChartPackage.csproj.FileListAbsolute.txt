@@ -5,3 +5,12 @@ E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.csprojResolveAsse
 E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.dll
 E:\Project\EChartPackage\EChartPackage\obj\Debug\EChartPackage.pdb
 E:\Project\EChartPackage\EChartPackage\bin\Debug\EChartPackage.XML
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\bin\Debug\EChartPackage.XML
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\bin\Debug\EChartPackage.dll
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\bin\Debug\EChartPackage.pdb
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\bin\Debug\Newtonsoft.Json.dll
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\obj\Debug\EChartPackage.csprojAssemblyReference.cache
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\obj\Debug\EChartPackage.csproj.CoreCompileInputs.cache
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\obj\Debug\EChartPackage.csproj.CopyComplete
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\obj\Debug\EChartPackage.dll
+D:\Source\Repos\EchartCommonLib\EChartPackage\EChartPackage\obj\Debug\EChartPackage.pdb
