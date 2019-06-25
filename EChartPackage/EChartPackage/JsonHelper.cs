@@ -1,15 +1,8 @@
-﻿/*=====================================================================
- *公司名称：Housoo（山西中网信息产业股份有限公司）
- *功能描述：Json数据处理
- *创 建 者：董志斌
- *创建日期：2016/10/8 17:01:00
-=====================================================================*/
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using Formatting = System.Xml.Formatting;
 
-namespace EchartLib
+namespace EChartPackage
 {
     /// <summary>
     /// json辅助

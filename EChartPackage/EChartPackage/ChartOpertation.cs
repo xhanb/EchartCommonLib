@@ -1,17 +1,9 @@
-﻿/* ==============================
-*
-* Author: 高海波
-* FileName：ChartOpertation
-* 说明:图表操作数据处理类
-* ===============================
-*/
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EChartPackage.ChartCommon;
 using EChartPackage.ChartComponent;
 using EChartPackage.ChartSeries;
 
-namespace EchartLib
+namespace EChartPackage
 {
     /// <summary>
     /// 图表操作数据处理类
